@@ -17,3 +17,20 @@ services:
             - 80:80
         volumes:
             - ./frontend/public:/usr/local/apache2/htdocs/
+    tests:
+        image: php:7.4-cli
+        volumes:
+             - ./backend:/var/www
+        working_dir: /var/www
+        entrypoint: ./vendor/bin/phpunit  
+        depends_on:
+            - backend 
+    docs:
+        image: phpdoc/phpdoc
+        volumes:
+            - ./backend:/var/www
+        working_dir: /var/www
+        entrypoint: phpdoc run -d ./app -t ./public/docs/
+        depends_on:
+            - backend 
+            - tests
