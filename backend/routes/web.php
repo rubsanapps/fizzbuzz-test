@@ -1,7 +1,5 @@
 <?php
-
 /** @var \Laravel\Lumen\Routing\Router $router */
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -21,4 +19,8 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
   $router->get('fizzbuzz/{number}', ['uses' => 'FizzBuzzController@calculate']);
 
+});
+
+$router->get('docs', function (){
+        return redirect('phpdoc/index.html');
 });

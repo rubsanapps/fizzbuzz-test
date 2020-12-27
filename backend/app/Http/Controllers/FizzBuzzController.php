@@ -1,10 +1,11 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Laravel\Lumen\Routing\Controller as BaseController;
 
 use App\Models\FizzBuzz;
 
-class FizzBuzzController extends Controller
+class FizzBuzzController extends BaseController
 {
 
     /**
@@ -18,6 +19,6 @@ class FizzBuzzController extends Controller
 
        return response()->json(FizzBuzz::calculate($number));
 
-    }      
-   
+    }
+
 }
