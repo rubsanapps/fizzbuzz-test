@@ -4,6 +4,18 @@
 
 - Clone this repository
 
+## Dependencies ## 
+
+- Install backend dependencies from backend directory.
+
+```
+cd backend
+```
+
+```
+composer install
+```
+
 ### How to run services ###
 
 ```
@@ -12,7 +24,7 @@ docker-compose up
 
 Then http://localhost:80 and http://localhost:8080 services will be available.
 
-Docs will be available from http://localhost:8080/docs
+Documentation will be accesible from http://localhost:8080/docs
 
 ```
 docker-compose run tests
@@ -36,7 +48,6 @@ A docker-compose.yml file that runs four services:
 - Docs: to generate documentation
 
 ## 
-
 
 
 

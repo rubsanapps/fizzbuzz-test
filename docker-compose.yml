@@ -10,13 +10,6 @@ services:
             - 8080:8080
         volumes:
             - ./backend:/var/www
-    composer:
-      image: composer/composer:php7
-      command: install
-      volumes: 
-        - ./backend:/var/www/backend
-      depends_on: 
-        - backend
           
     frontend:
         image: httpd:2.4-alpine
