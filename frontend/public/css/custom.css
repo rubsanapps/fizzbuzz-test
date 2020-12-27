@@ -1,0 +1,114 @@
+/***************
+ * Main elements *
+ ***************/
+
+ * {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1920px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(93,84,240,0.5);
+    background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+    background: -o-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+    background: -moz-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+    background: linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+    pointer-events: none;
+}
+
+.wrap {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/***************
+ * FORM  *
+ ***************/
+
+form {
+  width: 100%;
+}
+
+.form-title {
+  display: block;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/***************
+ * MARGINS UTIL  *
+ ***************/
+ .m-b-20 {
+    margin-bottom: 20px;
+}
+
+/***************
+ * PADDINGS UTIL  *
+ ***************/
+
+.p-l-55 {
+    padding-left: 55px;
+}
+.p-r-55 {
+    padding-right: 55px;
+}
+.p-t-80 {
+    padding-top: 80px;
+}
+.p-b-30 {
+    padding-bottom: 30px;
+}
